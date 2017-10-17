@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.y.mygallery.MainActivity" 
+    android:background="@drawable/t">
+    
+    
+    <ListView 
+        android:id="@android:id/list"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:longClickable="true"
+        android:focusableInTouchMode="true"
+        ></ListView>
+    
+    <TextView 
+        android:id="@android:id/empty"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/empty"/>
+    
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/background_dark"/>
+    
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchbtn"
+        android:text="@string/research"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+    
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/deletebtn"
+        android:text="@string/deletebtn"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+    
+
+</LinearLayout>

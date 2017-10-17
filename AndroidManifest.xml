@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.y.mygallery"
+    android:versionCode="1"
+    android:versionName="1.0" >
+	<!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-sdk android:minSdkVersion="11" android:targetSdkVersion="22" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/gallery"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" android:permission="android.permission.WRITE_EXTERNAL_STORAGE">
+        <!--选择操作列表 -->
+        <activity android:name="com.y.mygallery.MainActivity"
+                  android:label="@string/app_name">
+                  <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+                  </activity>
+        
+         <!--相册文件夹列表 -->
+        <activity android:name="com.y.mygallery.FileActivity"></activity>
+        <activity android:name="com.y.mygallery.GalleryActivity"></activity>
+        <activity android:name="com.y.mygallery.SecretImageView"></activity>
+        <activity android:name="com.y.mygallery.ImageActivity"></activity>
+        <activity android:name="com.y.mygallery.MoreChoiceView"></activity>
+        <activity android:name="com.y.mygallery.SecretArea"></activity>
+        <activity android:name="com.y.mygallery.MyIDCheck"></activity>
+        
+        
+        
+        <service android:name="com.y.service.SaveingImageService">
+           <intent-filter>
+             <action android:name="com.y.service.SavingImage"/>
+           </intent-filter>
+       </service>
+       
+    </application>
+    
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+
+</manifest>
